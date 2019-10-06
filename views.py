@@ -43,4 +43,4 @@ class changeAvailability(Model):
         artworkSearch = input('What artwork would you like to change the availability on? ')
         newAvailability = input('Is this artwork Available or Sold? ')
         availabilityChanged = Artwork.update(availability = newAvailability).where(Artwork.artwork == artworkSearch).execute()
-        print('The following availability has been changed', availabilityChanged)
+        print('The following availability has been changed', availabilityChanged)'''

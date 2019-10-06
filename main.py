@@ -1,20 +1,16 @@
 from peewee import *
 from database import Artwork, Artist
-from views import addArtist, allArtForArtist, allAvailableArtwork, addNewArtwork, deleteArtwork, changeAvailability
 
 def main():
     catalogContinue = 'Y'
+    print('Welcome to the National Artist Catalog!')
+    print('Here are the things you can do with this catalog.')
+    print('1) Add a new artist\n2) Search all artwork of a particular artist')
+    print('3) Search all available artwork for an artist\n4) Add a new piece of artwork')
+    print('5) Delete a piece of artwork\n6) Change availability off a piece of artwork')
+    choice = input('What would you like to do? ')
 
     while catalogContinue.upper() == 'Y':
-        choice = 0
-        
-        print('Welcome to the National Artist Catalog!')
-        print('Here are the things you can do with this catalog.')
-        print('1) Add a new artist\n2) Search all artwork of a particular artist')
-        print('3) Search all available artwork for an artist\n4) Add a new piece of artwork')
-        print('5) Delete a piece of artwork\n6) Change availability off a piece of artwork')
-        choice = input('What would you like to do? ')
-    
         if choice == 1:
             artistName = input('Please enter an artist name: ')
             artistEmail = input('Please enter the artist email: ')
